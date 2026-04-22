@@ -1,16 +1,36 @@
-# React + Vite
+# Meeting Copilot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A real-time AI meeting assistant that transcribes your conversation live, surfaces contextual suggestions every 30 seconds, and lets you dive deeper into any topic through an integrated chat — all in the browser, no backend required.
 
-Currently, two official plugins are available:
+**Live demo**: https://your-netlify-url.netlify.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## What it does
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Live transcription** — captures microphone audio in 5-second chunks and transcribes using Groq Whisper Large V3
+- **Smart suggestions** — every 30 seconds, analyzes the last 3 minutes of transcript and generates 3 distinct suggestions: a clarifying question, an action item, and a risk or insight
+- **Instant answers** — clicking any suggestion streams a detailed, context-aware response grounded in what was actually said
+- **Freeform chat** — ask anything about the meeting at any time
+- **Export** — download the full transcript as a .txt file for evaluation or review
+- **Configurable** — adjust refresh interval, context windows, and answer depth without touching code
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech stack
+
+| Layer | Choice |
+|---|---|
+| Frontend | React + Vite |
+| Transcription | Groq Whisper Large V3 |
+| LLM | Llama 3.3 70B (via Groq) |
+| Styling | Plain CSS |
+| Deployment | Netlify |
+
+No backend. All API calls go directly from the browser to Groq. No data is stored anywhere.
+
+---
+
+## Setup
+
+```bash
