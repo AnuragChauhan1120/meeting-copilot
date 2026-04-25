@@ -2,7 +2,7 @@
 
 A real-time AI meeting assistant that transcribes your conversation live, surfaces contextual suggestions every 30 seconds, and lets you dive deeper into any topic through an integrated chat — all in the browser, no backend required.
 
-**Live demo**: https://your-netlify-url.netlify.app
+**Live demo**: https://capable-unicorn-60b3ff.netlify.app/
 
 ---
 
